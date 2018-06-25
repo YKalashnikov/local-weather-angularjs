@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Show the Local Weather AngularJs</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+
+
+
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <body ng-app="weatherApp" ng-controller="weatherCtrl" ng-style="weatherBackground">
+  <div class="start">
+    <div class="icon ">
+      <img ng-src="{{icon}}"></img>
+    </div>
+    <h1 class="city">
+      {{locationName}}
+    </h1>
+    <h3 class="state">
+      {{region_name}}
+    </h3>
+    <h5 class="zip_code">
+      {{zip_code}}
+    </h5>
+
+    <div class="properties">
+      <h4 class="currentWeather">
+        <p>Current Weather</p>
+        {{description | uppercase}}
+      </h4>
+      <h4 class="windSpeed">
+        <p>Wind Speed</p>
+        {{speed}}
+      </h4>
+
+      <h4 class="temperature" ng-init="tempVal=true" ng-show="tempVal" ng-click="tempVal=!tempVal">
+        <p>Temperature</p>
+        {{tempatureF}}
+      </h4>
+
+      <h4 class="temperature" ng-show="tempVal==false" ng-click="tempVal=!tempVal">
+        <p>Temperature</p>
+        {{tempatureC}}
+      </h4>
+
+      <h4 class="humidity">
+        <p>Humidity</p>
+        {{humidity}}
+      </h4>
+    </div>
+    <h4 class="ip">
+      <p>IP address</p>
+      {{ip}}
+    </h4>
+  </div>
+  <h6 class="end">Coded by<a href="https://codepen.io/AK-47/" style="text-decoration: none;" target="_blank"> Yurii Kalashnikov </h6></a>
+</body>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
